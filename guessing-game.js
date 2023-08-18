@@ -1,8 +1,13 @@
+// Write a function called guessingGame which returns a function that allows you to guess a random whole number between 0 and 99. Every time you create a new game, it should select a new random number, and keep it secret from the player.
+
+// Once the game has started, you can guess the number. The game should tell you whether your guess is too high, too low, or correct.
+
+// After a correct guess, the game ends.
+
 function guessingGame() {
     let num = Math.floor(Math.random() * 100);
     gameIsActive = true;
     guessCount = 0;
-    console.log("num is" + num)
     return function game(guess) {
         if (gameIsActive) {
             guessCount++;
