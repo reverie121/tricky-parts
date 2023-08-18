@@ -2,7 +2,7 @@
 
 function curriedAdd(total) {
     if (total === undefined) return 0;
-    if (total !== undefined) return function addToTotal(num) {
+    return function addToTotal(num) {
         if (num === undefined) return total;
         total += num;
         return addToTotal;
